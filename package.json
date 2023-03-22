@@ -1,0 +1,24 @@
+{
+  "dependencies": {
+    "create-react-app": "^5.0.1"
+  },
+  "name": "@20192094/webtest",
+  "version": "0.0.0",
+  "description": "npm init test for create package.json",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+  },
+  "repository": {
+    "type":"git",
+    "url":"https://github.com/20192094/webtest.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "keywords": [
+    "npm"
+  ],
+  "author": "Eunhee Kim",
+  "license": "ISC"
+}
