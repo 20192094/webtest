@@ -40,7 +40,7 @@
 									<div class="row gtr-50">
 										<div class="col-12">
 											
-											<p style="font-size:42px">ENFJ</p>
+											<p style="font-size:42px" id ="mbti-result"></p>
 											<ul class="buttons">
 												<li><a href="index2.html" class="button">메인페이지로 이동</a></li>
 											</ul>
@@ -73,6 +73,33 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script src="assets/js/logout.js"></script>
+
+			<script>
+				$(document).ready(function() {
+				// MBTI 결과 표시
+				fetchMBTIResult();
+				});
+	
+				function fetchMBTIResult() {
+				$.ajax({
+					url: '/mbti/result', // 서버 엔드포인트
+					method: 'GET',
+					success: function(response) {
+					console.log('MBTI 결과 가져오기 성공:', response);
+					displayMBTIResult(response.result);
+					},
+					error: function(error) {
+					console.log('MBTI 결과 가져오기 실패:', error);
+					}
+				});
+				}
+	
+				function displayMBTIResult(result) {
+				$('#mbti-result').text(result);
+				}
+	
+			</script>
 
 	</body>
 </html>
